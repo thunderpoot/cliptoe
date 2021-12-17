@@ -2001,7 +2001,7 @@ sub ptoe_category_examples
         'Zn', 'Be', 'Li', 'La', 'Ac', 'La', 'Ac'
       )
     {
-        $p[ $i++ ] = $elements->{elementbysymbol}->{$_}->{number};
+        $p[ ++$i ] = $elements->{elementbysymbol}->{$_}->{number};
     }
     return @p;
 }
@@ -2012,7 +2012,7 @@ sub ptoe_colours
 
     # Colour categories
     my $i;
-    $c[ $i++ ] = $_
+    $c[ ++$i ] = $_
       for (
         "Hydrogen",
         "G 18",
