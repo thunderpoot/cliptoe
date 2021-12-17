@@ -27,6 +27,8 @@ cliptoe --mono         disable colours
 
 ### Examples:
 
+<img width="796" alt="Screenshot 2021-12-17 at 02 21 04" src="https://user-images.githubusercontent.com/54200401/146478333-0c055e48-503f-4038-afba-a7b451684524.png">
+
 <img width="797" alt="Screenshot 2021-12-16 at 23 21 41" src="https://user-images.githubusercontent.com/54200401/146463348-203dc15b-2afc-4971-863c-f53712fbe4c0.png">
 
 <img width="796" alt="Screenshot 2021-12-17 at 01 49 23" src="https://user-images.githubusercontent.com/54200401/146476257-dd5d420f-5c7c-4987-b6fc-089632c800ee.png">
