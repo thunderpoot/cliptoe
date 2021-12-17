@@ -8,7 +8,7 @@ use JSON::XS;
 use Getopt::Long qw(GetOptions);
 use Time::HiRes qw(usleep);
 
-my $ptoe_version = '1.1';
+my $ptoe_version = '1.1.1';
 
 # ,-----------------------------------------------,
 # | CLIPTOE - by underwood,                       |
@@ -2110,7 +2110,6 @@ sub do_ptoe
         "key"       => \$key,        # flag
         "label"     => \$label,      # flag
         "mono"      => \$mono,       # flag
-        "auto=i"    => \$auto,       # numeric
         "animate=i" => \$auto,       # numeric
         "table"     => \$table,      # flag
         "debug"     => \$debug,      # flag
