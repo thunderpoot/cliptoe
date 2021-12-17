@@ -1,8 +1,14 @@
 # CLI-PTOE
-Command Line Interactive Periodic Table Of Elements.
-_It's a pretty stupid name._ 📋🦶
+Command Line Interactive Periodic Table Of Elements. _(It's a pretty stupid name.)_ 📋🦶
 
 ![ezgif-2-5c289550e5](https://user-images.githubusercontent.com/54200401/146476909-0a99cc8e-73b7-41ee-9ca6-74fe06c93858.gif)
+
+### What?
+
+ - ✅ Highlight elements on Periodic Table
+ - ✅ Parse chemical formulas
+ - ✅ Calculate atomic mass of compounds
+ - ✅ Pretty colours!
 
 ### Usage:
 
@@ -74,9 +80,29 @@ $VAR1 = [
           ]
         ];
 
+$ cliptoe -d NaHCO3
+$VAR1 = [
+          [
+            'Na',
+            '1'
+          ],
+          [
+            'H',
+            '1'
+          ],
+          [
+            'C',
+            '1'
+          ],
+          [
+            'O',
+            '3'
+          ]
+        ];
 $ 
 ```
-_This assumes that the input has already been checked for validity._
+## Caveats
+As such, this program is only able to handle formulas like `C15H31N3O13P2`, but formulas like `Fe2(SO4)3` are not supported (yet).
 
 ## Disclaimer
 I'm not a chemist, and there are probably all kinds of bugs / problems that I'm not aware of.
