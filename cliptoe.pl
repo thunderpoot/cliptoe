@@ -2177,7 +2177,7 @@ sub repaint_cursor
     $SIG{INT} = \&repaint_cursor;
     print( "\e[0J" );
     print( "\e[H" );
-    print( "\e[?25h" );
+    print( "\e[?25h^C\e[0K\n" );
     exit;
 }
 
