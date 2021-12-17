@@ -2,7 +2,7 @@
 Command Line Interactive Periodic Table Of Elements.
 _It's a pretty stupid name._ 📋🦶
 
-![ezgif-2-3019f6a5c2](https://user-images.githubusercontent.com/54200401/146476275-4ebccbcc-572b-475b-9653-fcc0375bc4ae.gif)
+![ezgif-2-5c289550e5](https://user-images.githubusercontent.com/54200401/146476909-0a99cc8e-73b7-41ee-9ca6-74fe06c93858.gif)
 
 ### Usage:
 
