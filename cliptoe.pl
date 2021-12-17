@@ -7,7 +7,6 @@ use Data::Dumper;
 use JSON::XS;
 use Getopt::Long qw(GetOptions);
 use Time::HiRes qw(usleep);
-# use LWP::Simple;
 
 my $ptoe_version = '1.1';
 
@@ -1662,15 +1661,8 @@ sub ptoe_help
     exit;
 }
 
-sub load_ptoe
+sub load_ptoe_colours
 {
-# eval { $elements = decode_json( read_file( 'chemical_elements.json' ) ); };
-# if ( $@ )
-# {
-#     println( "data not found, please make sure chemical_elements.json is in your cwd" );
-#     die;
-# }
-# println( Dumper $elements );
     @ptoe_category_examples = ptoe_category_examples();
     @ptoe_colours           = ptoe_colours();
     return;
@@ -2191,7 +2183,7 @@ sub repaint_cursor
 
 $SIG{INT} = \&repaint_cursor;
 
-load_ptoe();
+load_ptoe_colours();
 do_ptoe();
 
 1;
