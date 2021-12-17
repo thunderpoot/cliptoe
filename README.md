@@ -12,7 +12,7 @@ Command Line Interactive Periodic Table of Elements
 
 Usage:
 cliptoe [atom]         show details for element by atomic symbol or number
-cliptoe [compound]     list elements in compound [q]
+cliptoe [compound]     list elements in compound
 
 Options:
 cliptoe --animate=<n>  scroll through colours, speed is <n>
@@ -21,7 +21,7 @@ cliptoe --ind=<n>      set colour start index
 cliptoe --label        show period and group labels
 cliptoe --compounds    show list of example compounds
 cliptoe --key          show colour key
-cliptoe --table [q]    show table / highlight elements on table
+cliptoe --table        show table / highlight elements on table
 cliptoe --mono         disable colours
 ```
 
