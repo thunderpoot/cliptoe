@@ -2,8 +2,6 @@
 Command Line Interactive Periodic Table Of Elements.
 _It's a pretty stupid name._ 📋🦶
 
-![ezgif-2-5ec4400634](https://user-images.githubusercontent.com/54200401/146465354-49703128-1b50-4f90-ad28-f66ad70b93b7.gif)
-
 ### Usage:
 
 ```
@@ -26,8 +24,6 @@ cliptoe --mono         disable colours
 ```
 
 ### Examples:
-
-<img width="797" alt="Screenshot 2021-12-16 at 23 18 59" src="https://user-images.githubusercontent.com/54200401/146463116-ef01d707-05ef-4ca7-a4b9-64e23e650854.png">
 
 <img width="797" alt="Screenshot 2021-12-16 at 23 21 41" src="https://user-images.githubusercontent.com/54200401/146463348-203dc15b-2afc-4971-863c-f53712fbe4c0.png">
 
