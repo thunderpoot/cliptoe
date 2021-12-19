@@ -2,19 +2,18 @@
 
 use strict;
 
-use Encode;
 use Data::Dumper;
 use JSON::XS;
 use Getopt::Long qw(GetOptions);
 use Time::HiRes qw(usleep);
 
-my $ptoe_version = '1.1.1';
+my $ptoe_version = '1.1.2';
 
-# ,-----------------------------------------------,
-# | CLIPTOE - by underwood,                       |
-# |               searinox,                       |
-# |                     and devon - December 2021 |
-# `-----------------------------------------------'
+# Based on PTOE.BAS
+# ,----------------------------------------------,
+# | PTOE.BAS - by underwood, searinox, and devon |
+# |          - December 2021                     |
+# `----------------------------------------------'
 # Command Line Interactive Periodic Table of Elements
 # ' https://www.youtube.com/watch?v=wlOdUATGuQY
 #
@@ -22,134 +21,12 @@ my $ptoe_version = '1.1.1';
 # ' Colors are selected based on how well the text shows up against them, but mostly it's a
 # ' matter of personal preference." https://www.thoughtco.com/color-on-the-periodic-table-608827
 
-# Originally written in BASIC, then ported to Perl
-
 our @ptoe_category_examples;
 our @ptoe_colours;
 
 # our $mole = 6.02214076e23;
 
 our $elements = {
-    'elementbynumber' => {
-        '51'  => 'Sb',
-        '108' => 'Hs',
-        '78'  => 'Pt',
-        '5'   => 'B',
-        '88'  => 'Ra',
-        '4'   => 'Be',
-        '41'  => 'Nb',
-        '33'  => 'As',
-        '109' => 'Mt',
-        '21'  => 'Sc',
-        '112' => 'Cn',
-        '91'  => 'Pa',
-        '117' => 'Ts',
-        '2'   => 'He',
-        '9'   => 'F',
-        '86'  => 'Rn',
-        '11'  => 'Na',
-        '37'  => 'Rb',
-        '6'   => 'C',
-        '114' => 'Fl',
-        '61'  => 'Pm',
-        '103' => 'Lr',
-        '76'  => 'Os',
-        '1'   => 'H',
-        '106' => 'Sg',
-        '23'  => 'V',
-        '79'  => 'Au',
-        '101' => 'Md',
-        '93'  => 'Np',
-        '89'  => 'Ac',
-        '115' => 'Mc',
-        '57'  => 'La',
-        '13'  => 'Al',
-        '85'  => 'At',
-        '84'  => 'Po',
-        '47'  => 'Ag',
-        '74'  => 'W',
-        '63'  => 'Eu',
-        '75'  => 'Re',
-        '53'  => 'I',
-        '110' => 'Ds',
-        '70'  => 'Yb',
-        '97'  => 'Bk',
-        '80'  => 'Hg',
-        '27'  => 'Co',
-        '3'   => 'Li',
-        '72'  => 'Hf',
-        '67'  => 'Ho',
-        '43'  => 'Tc',
-        '17'  => 'Cl',
-        '82'  => 'Pb',
-        '31'  => 'Ga',
-        '113' => 'Nh',
-        '60'  => 'Nd',
-        '55'  => 'Cs',
-        '54'  => 'Xe',
-        '49'  => 'In',
-        '116' => 'Lv',
-        '22'  => 'Ti',
-        '10'  => 'Ne',
-        '92'  => 'U',
-        '104' => 'Rf',
-        '77'  => 'Ir',
-        '62'  => 'Sm',
-        '107' => 'Bh',
-        '102' => 'No',
-        '87'  => 'Fr',
-        '20'  => 'Ca',
-        '12'  => 'Mg',
-        '36'  => 'Kr',
-        '59'  => 'Pr',
-        '44'  => 'Ru',
-        '90'  => 'Th',
-        '45'  => 'Rh',
-        '94'  => 'Pu',
-        '40'  => 'Zr',
-        '95'  => 'Am',
-        '25'  => 'Mn',
-        '38'  => 'Sr',
-        '69'  => 'Tm',
-        '24'  => 'Cr',
-        '52'  => 'Te',
-        '19'  => 'K',
-        '42'  => 'Mo',
-        '83'  => 'Bi',
-        '15'  => 'P',
-        '14'  => 'Si',
-        '118' => 'Og',
-        '50'  => 'Sn',
-        '99'  => 'Es',
-        '29'  => 'Cu',
-        '65'  => 'Tb',
-        '73'  => 'Ta',
-        '64'  => 'Gd',
-        '48'  => 'Cd',
-        '96'  => 'Cm',
-        '30'  => 'Zn',
-        '26'  => 'Fe',
-        '81'  => 'Tl',
-        '16'  => 'S',
-        '7'   => 'N',
-        '32'  => 'Ge',
-        '58'  => 'Ce',
-        '66'  => 'Dy',
-        '100' => 'Fm',
-        '71'  => 'Lu',
-        '8'   => 'O',
-        '68'  => 'Er',
-        '39'  => 'Y',
-        '56'  => 'Ba',
-        '18'  => 'Ar',
-        '105' => 'Db',
-        '34'  => 'Se',
-        '35'  => 'Br',
-        '28'  => 'Ni',
-        '98'  => 'Cf',
-        '111' => 'Rg',
-        '46'  => 'Pd'
-    },
     'elementbysymbol' => {
         'F' => {
             'amu'      => '18.998',
@@ -1639,6 +1516,16 @@ our $elements = {
     }
 };
 
+my $allsymbols =
+    'HHeLiBeBCNOFNeNaMgAlSiPSClArKCaScTiVCrMnFeCoNiCuZnGaGeAsSeBrKrRbSrYZrNbMoTc'.
+    'RuRhPdAgCdInSnSbTeIXeCsBaLaCePrNdPmSmEuGdTbDyHoErTmYbLuHfTaWReOsIrPtAuHgTl'.
+    'PbBiPoAtRnFrRaAcThPaUNpPuAmCmBkCfEsFmMdNoLrRfDbSgBhHsMtDsRgCnNhFlMcLvTsOg';
+my $cou;
+while ( $allsymbols =~ /([A-Z][a-z]?)/g )
+{
+    $elements->{elementbynumber}->{ ++$cou } = $1;
+}
+
 sub ptoe_help
 {
     println( 'Command Line Interactive Periodic Table of Elements' );
@@ -1671,31 +1558,22 @@ sub load_ptoe_colours
 sub ptoe
 {
     my ( $conn ) = @_;
-
-    # Elementary, my dear Watson
-    my $insanity = ( $elements->{elementbysymbol}->{'U'}->{name} ne 'Uranium' );
-    if ( $insanity )
-    {
-        load_ptoe();
-        if ( $insanity )
-        {
-            return error( "error while loading data" );
-        }
-    }
-
     my $query = $conn->{arg};
-
     if ( $query =~ /([^A-Za-z0-9])/ )
     {
         return error( 'unknown symbol in query: "' . $1 . '"' );
     }
-
     if ( ( $query =~ /[a-z]{2,}/ ) || ( $query =~ /\d[a-z]/ ) )
     {
-        error( 'invalid input' );
-        return;
+        # Search for element by name if query is not symbol, number, or formula
+        my $found;
+        for ( keys %{ $elements->{elementbysymbol} } )
+        {
+            my $nm = $elements->{elementbysymbol}->{$_}->{name};
+            $found = 1 if ( uc( $nm ) eq uc( $query ) );
+        }
+        return error( 'invalid input' ) if ( !$found );
     }
-
     return ptoe_list_compounds()
       if ( $conn->{options}->{compounds} || $conn->{options}->{list} );
 
@@ -1768,7 +1646,14 @@ sub ptoe_list_atoms
     my @elem = ptoe_parse_input( $query );
     if ( $conn->{options}->{debug} )
     {
-        println( Dumper( \@elem ) );
+        # Query in Perl style
+        println( Dumper( $query ) );
+        exit;
+    }
+    elsif ( $conn->{options}->{json} )
+    {
+        # Query in pretty JSON style
+        println( JSON::XS->new->pretty->encode( \@elem ) );
         exit;
     }
 
@@ -2014,18 +1899,9 @@ sub ptoe_colours
     my $i;
     $c[ ++$i ] = $_
       for (
-        "Hydrogen",
-        "G 18",
-        "G 17",
-        "G 16",
-        "G 15",
-        "G 14",
-        "G 13",
-        "G 3-12",
-        "G 2",
-        "G 1-H",
-        "Lanthanides",
-        "Actinides"
+        "Hydrogen", "G 18", "G 17", "G 16", "G 15",
+        "G 14", "G 13", "G 3-12", "G 2", "G 1-H",
+        "Lanthanides", "Actinides"
       );
     return @c;
 }
@@ -2061,33 +1937,6 @@ sub error
     exit;
 }
 
-sub read_file
-{
-    my ( $fname, $warn ) = @_;
-
-    my $s;
-    my $fd;
-
-    # return if !open( $fd, '<', $fname );
-    if ( !open( $fd, '<', $fname ) )
-    {
-        warn "can't read $fname: $!" if $warn;
-        return;
-    }
-
-    my $len = ( stat( $fd ) )[7];
-    my $got = sysread( $fd, $s, $len );
-    if ( $got ne $len )
-    {
-        warn "read_file $fname: error got=$got len=$len: $!";
-        undef $s;
-    }
-    close( $fd );
-
-    Encode::_utf8_off( $s );
-    return $s;
-}
-
 sub do_ptoe
 {
     my $conn;
@@ -2100,6 +1949,7 @@ sub do_ptoe
     my $label;
     my $mono;
     my $auto;
+    my $json;
     my $debug;
     my $table;
     my $comp;
@@ -2110,12 +1960,12 @@ sub do_ptoe
         "key"       => \$key,        # flag
         "label"     => \$label,      # flag
         "mono"      => \$mono,       # flag
+        "json"      => \$json,       # flag
         "animate=i" => \$auto,       # numeric
         "table"     => \$table,      # flag
         "debug"     => \$debug,      # flag
         "help"      => \$help,       # flag
         "version"   => \$version,    # flag
-        "v"         => \$version,    # flag
         "compounds" => \$comp,       # flag
     ) or error( 'Error in command line arguments' );
 
@@ -2125,6 +1975,7 @@ sub do_ptoe
     $conn->{options}->{label}     = $label;
     $conn->{options}->{mono}      = $mono;
     $conn->{options}->{auto}      = $auto;
+    $conn->{options}->{json}      = $json;
     $conn->{options}->{table}     = $table;
     $conn->{options}->{debug}     = $debug;
     $conn->{options}->{help}      = $help;
