@@ -1,5 +1,5 @@
-# CLI-PTOE
-Command Line Interactive Periodic Table Of Elements. _(It's a pretty stupid name.)_ 📋🦶
+# CLI-PToE
+Command Line Interactive Periodic Table of Elements. _(It's a pretty stupid name.)_ 📋🦶
 
 ![ezgif-2-5c289550e5](https://user-images.githubusercontent.com/54200401/146476909-0a99cc8e-73b7-41ee-9ca6-74fe06c93858.gif)
 
