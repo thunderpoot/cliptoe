@@ -1570,7 +1570,12 @@ sub ptoe
         for ( keys %{ $elements->{elementbysymbol} } )
         {
             my $nm = $elements->{elementbysymbol}->{$_}->{name};
-            $found = 1 if ( uc( $nm ) eq uc( $query ) );
+            if ( uc( $nm ) eq uc( $query ) )
+            {
+                $found = 1;
+                $query = $_;
+                last;
+            }
         }
         return error( 'invalid input' ) if ( !$found );
     }
