@@ -49,7 +49,7 @@ sub ptoe_parse_input
     my ( $query ) = @_;
 
     # Parse chemical formula, input a string and get an array
-    # e.g 'H20' => $VAR1 = [ 'H', '2' ]; $VAR2 = [ 'O', '1' ];
+    # e.g 'H2O' => $VAR1 = [ 'H', '2' ]; $VAR2 = [ 'O', '1' ];
 
     my @elem;
     while ( $query =~ /([A-Z][a-z]?)([0-9]+)?/g )
