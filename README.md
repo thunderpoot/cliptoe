@@ -42,7 +42,13 @@ cliptoe --mono         disable colours
 <img width="796" alt="Screenshot 2021-12-16 at 23 25 35" src="https://user-images.githubusercontent.com/54200401/146463668-d257bdf7-6e5a-4380-804a-2a4659b7615a.png">
 
 ## Concept
-The `ptoe_parse_input` function turns a chemical formula into its component items:
+The idea was originally a TeleBASIC code-golf exercise, then was ported to Perl.
+The example screenshots are from the Perl version.
+
+Creating this program in whatever language has been helpful for me in familiarising myself with syntax,
+using the same (fairly naïve) approaches.  I plan to add more 'translations' eventually, such as Golang, or C.
+
+In Perl, the `ptoe_parse_input` function turns a chemical formula into its component items:
 ```perl
 sub ptoe_parse_input
 {
@@ -99,12 +105,16 @@ $VAR1 = [
             '3'
           ]
         ];
-$ 
+$
 ```
 ## Caveats
-As such, this program is only able to handle formulas like `C15H31N3O13P2`, but formulas like `Fe2(SO4)3` are not supported (yet).
+These programs are only able to handle formulas like `C15H31N3O13P2`, but formulas like `Fe2(SO4)3` are not supported (yet).
 
 ## Disclaimer
 I'm not a chemist, and there are probably all kinds of bugs / problems that I'm not aware of.
 I plan to address any such issues to the best of my ability, but cannot make any promises.
 If you find this helpful, please consider [supporting me via PayPal](https://www.paypal.com/donate/?hosted_button_id=NCGGHVES859DA) ❤️
+
+## Thanks
+[@telnet23](https://github.com/telnet23)
+[@kelturio](https://github.com/Kelturio)
