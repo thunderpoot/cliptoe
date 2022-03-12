@@ -367,18 +367,20 @@ if args.compounds:
 if args.query is None:
     args.query = ''
 
-elements = list(DictReader(open("elements.csv")))
-ebs = elements_hash(elements)  # elements by symbol
-args.elem, formula = ptoe_parse_input(args.query)
+with open("elements.csv") as elements_csv:
+    elements = list(DictReader(elements_csv))
 
-ptoe(elements, ebs, args)
+    ebs = elements_hash(elements)  # elements by symbol
+    args.elem, formula = ptoe_parse_input(args.query)
 
-if args.animate:
-    signal.signal(signal.SIGINT, signal_handler)
-    args.ind = int(1)
-    print("\33[?25l\33[H\33[0J")
-    while True:
-        print("\33[H")
-        ptoe(elements, ebs, args)
-        args.ind += 1
-        sleep(float(args.animate))
+    ptoe(elements, ebs, args)
+
+    if args.animate:
+        signal.signal(signal.SIGINT, signal_handler)
+        args.ind = int(1)
+        print("\33[?25l\33[H\33[0J")
+        while True:
+            print("\33[H")
+            ptoe(elements, ebs, args)
+            args.ind += 1
+            sleep(float(args.animate))
