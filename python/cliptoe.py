@@ -58,10 +58,7 @@ def compounds():
 
 def list_compounds(compounds):
     pad = 4
-    longest = 1
-    for c in compounds:
-        if len(c) > longest:
-            longest = len(c)
+    longest = max(map(len, compounds))
     print('{} {}{}'.format('Formula', ' '*(pad+longest-7), 'Common Name'))
     print('{} {}{}'.format('-------', ' '*(pad+longest-7), '-----------'))
     for c in sorted(compounds):
