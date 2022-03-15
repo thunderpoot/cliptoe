@@ -46,7 +46,7 @@ The idea was originally a TeleBASIC code-golf exercise, then was ported to Perl.
 The example screenshots are from the Perl version.
 
 Creating this program in whatever language has been helpful for me in familiarising myself with syntax,
-using the same (fairly naïve) approaches.  I plan to add more 'translations' eventually, such as Golang, or C.
+using the same (fairly naïve) approaches.  I plan to add more 'translations' eventually.
 
 In Perl, the `ptoe_parse_input` function turns a chemical formula into its component items:
 ```perl
