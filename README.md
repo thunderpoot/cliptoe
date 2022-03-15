@@ -41,6 +41,18 @@ cliptoe --mono         disable colours
 
 <img width="796" alt="Screenshot 2021-12-16 at 23 25 35" src="https://user-images.githubusercontent.com/54200401/146463668-d257bdf7-6e5a-4380-804a-2a4659b7615a.png">
 
+## Languages
+### <img style="vertical-align: middle" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" /> <span style="vertical-align: middle">&nbsp;&nbsp;TeleBASIC</span>
+
+### <img style="vertical-align: middle" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/perl/perl-plain.svg" /> <span style="vertical-align: middle">&nbsp;&nbsp;Perl</span>
+
+### <img style="vertical-align: middle" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /> <span style="vertical-align: middle">&nbsp;&nbsp;Python</span>
+
+### <img style="vertical-align: middle" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" /> <span style="vertical-align: middle">&nbsp;&nbsp;Golang</span>
+
+<br>
+<br>
+
 ## Concept
 The idea was originally a TeleBASIC code-golf exercise, then was ported to Perl.
 The example screenshots are from the Perl version.
@@ -48,6 +60,8 @@ The example screenshots are from the Perl version.
 Creating this program in whatever language has been helpful for me in familiarising myself with syntax,
 using the same (fairly naïve) approaches.  I plan to add more 'translations' eventually.
 
+
+## Nitty gritty
 In Perl, the `ptoe_parse_input` function turns a chemical formula into its component items:
 ```perl
 sub ptoe_parse_input
@@ -108,7 +122,7 @@ $VAR1 = [
 $
 ```
 ## Caveats
-These programs are only able to handle formulas like `C15H31N3O13P2`, but formulas like `Fe2(SO4)3` are not supported (yet).
+These programs are only able to handle formulas like `C15H31N3O13P2`, formulas like `Fe2(SO4)3` are not supported (yet).
 
 ## Disclaimer
 I'm not a chemist, and there are probably all kinds of bugs / problems that I'm not aware of.
@@ -118,3 +132,4 @@ If you find this helpful, please consider [supporting me via PayPal](https://www
 ## Thanks
 [@telnet23](https://github.com/telnet23)
 [@kelturio](https://github.com/Kelturio)
+[@devicons](https://github.com/devicons/)
