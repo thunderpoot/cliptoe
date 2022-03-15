@@ -243,7 +243,7 @@ def ptoe_list_atoms(elements):
 def get_sumoutput(formula):
     sumoutput = []
     atmol = 0
-    totalsum = int(0)
+    totalsum = float(0)
 
     for einc in formula:
         atom = einc[0]
@@ -263,7 +263,7 @@ def get_sumoutput(formula):
         amu = f"{adetails['amu']} amu"
         if many > 1:
             amu = f"{many} * {adetails['amu']} amu = "
-            amu += str(float(adetails['amu']) * many) + ' amu'
+            amu += str(float(float(adetails['amu']) * many)) + ' amu'
 
         sumoutput.append(
             # hatom +
@@ -315,8 +315,11 @@ def atmolcalc(formula):
 
     if args.query:
         if len(formula) > 1:
-            s = f"There are {totalsum} grams per mole of {args.query}"
-            print(s)
+            print(
+                "There are {} grams per mole of {}".format(
+                    str(float(totalsum)), args.query)
+            )
+
     return
 
 
@@ -367,7 +370,7 @@ if args.compounds:
 if args.query is None:
     args.query = ''
 
-with open("elements.csv") as elements_csv:
+with open("../elements.csv") as elements_csv:
     elements = list(DictReader(elements_csv))
 
 ebs = elements_hash(elements)  # elements by symbol
