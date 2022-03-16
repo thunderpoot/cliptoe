@@ -464,8 +464,9 @@ func main() {
         os.Exit(0)
     }
 
+    if len(flag.Args()) == 0 { *tablePtr = true }
+
     if *animatePtr > 0 {
-        if len(flag.Args()) == 0 { *tablePtr = true }
 
         if *animatePtr < 1 {
             *animatePtr = 1
