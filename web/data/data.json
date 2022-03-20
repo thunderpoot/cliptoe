@@ -3606,6 +3606,7 @@
         "CO2"           : "Carbon Dioxide",
         "H2O"           : "Dihydrogen Monoxide",
         "HO"            : "Hydrogen Monoxide",
+        "HOH"           : "Hydrogen Hydroxide",
         "C20H25N3O"     : "Lysergic Acid Diethylamide",
         "C6H14"         : "Hexane"
     }

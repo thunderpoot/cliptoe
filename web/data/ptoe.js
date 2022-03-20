@@ -1,3 +1,4 @@
+let isinverted = false;
 let colourindex = 0;
 let colourvariation = 1;
 
@@ -81,13 +82,19 @@ $(document).ready(function () {
         });
 
         $('#but_dark').click(function () {
-            if ($("#container").hasClass("inverted")) {
-                $('#darkBG').animate({opacity:0},400, function () {
-                    $('#container').removeClass("inverted");
-                });
+            if (isinverted) {
+                isinverted = !isinverted;
+                // $('#darkBG').animate({opacity:0},400, function () {
+                $('body').animate({ backgroundColor: "#fff" }, "slow");
+                $('#container').removeClass("inverted");
+                    // $('#container').removeClass("inverted");
+                // });
             } else {
-                $('#darkBG').animate({opacity:1},400);
+                isinverted = !isinverted;
+                $('body').animate({ backgroundColor: "#000" }, "slow");
                 $('#container').addClass("inverted");
+                // $('#darkBG').animate({opacity:1},400);
+                // $('#container').addClass("inverted");
             }
         });
 
