@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Interactive Periodic Table of Elements</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+            integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY="
+            crossorigin="anonymous"></script>
+    <script src="./data/ptoe.js"></script>
+    <link rel="stylesheet" href="./data/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <div id="darkBG"></div>
+        <table>
+
+            <tr style="height: 1.2em;">&nbsp;</tr>
+            <p id="logo" class="tlcorner"><span class="noselect">&Sigma;</span></p>
+            <tr class="noselect">
+                    <td id="menu">
+                        <ul class="menu">
+                            <li id="but_dark">&nbsp;Invert</li>
+                            <details><summary><li id="but_colours">&nbsp;Colour</li></summary>
+                            <p class="noselect">Index:&nbsp;&nbsp;&nbsp;<span class="iresult">0&nbsp;</span>&nbsp;<span class="iminus">-</span>/<span class="iplus">+</span></p>
+                            <p class="noselect">Variant:&nbsp;<span class="vresult">1&nbsp;</span>&nbsp;<span class="vminus">-</span>/<span class="vplus">+</span></p>
+                            <br /><br /><br /></details>
+                            <details>
+                                <p><a target="_blank" href="https://github.com/thunderpoot">Fork me on GitHub</a></p>
+                                <p><a target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=NCGGHVES859DA">Buy me coffee</a></p>
+                                <summary><li id="but_about">&nbsp;About</li></summary>
+                                </details>
+                        </ul>
+                    </td>
+                    <td class="forminput">
+                        <form onsubmit="return false">
+                            <input list="compounds" name="formulaInput" id="formulaInput" placeholder="Enter formula..." type="text" />
+                            <datalist id="compounds"></datalist>
+                            <button class="clr">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                                </svg>
+                            </button>
+                        </form>
+                        <br />
+                        <table id="periodicTable"></table>
+                    </td>
+                    <td class="atmolcalc" style="vertical-align: top;"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
