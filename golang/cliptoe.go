@@ -284,15 +284,15 @@ func get_compounds() (map[string]string, int) {
     compounds := map[string]string{}
 
     compounds["C21H30O2"] = "Tetrahydrocannabinol"
-    compounds["H2SO4"] = "Sulphuric Acid"
+    compounds["H2SO4"] = "Sulfuric Acid"
     compounds["NH3"] = "Ammonia"
-    compounds["SF6"] = "Sulphur Hexafluoride"
+    compounds["SF6"] = "Sulfur Hexafluoride"
     compounds["C7H8"] = "Toluene"
     compounds["H2O2"] = "Hydrogen Peroxide"
     compounds["C2H2"] = "Acetylene"
     compounds["CH3OH"] = "Methanol"
     compounds["C7H5N3O6"] = "Trinitrotoluene"
-    compounds["SO4"] = "Sulphur Dioxide"
+    compounds["SO4"] = "Sulfur Dioxide"
     compounds["NaHCO3"] = "Sodium Bicarbonate"
     compounds["C2H5OH"] = "Ethanol"
     compounds["CH4"] = "Methane"

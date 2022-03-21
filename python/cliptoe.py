@@ -23,15 +23,15 @@ def version_and_author():
 
 def compounds():
     c = {'C21H30O2': 'Tetrahydrocannabinol',
-         'H2SO4': 'Sulphuric Acid',
+         'H2SO4': 'Sulfuric Acid',
          'NH3': 'Ammonia',
-         'SF6': 'Sulphur Hexafluoride',
+         'SF6': 'Sulfur Hexafluoride',
          'C7H8': 'Toluene',
          'H2O2': 'Hydrogen Peroxide',
          'C2H2': 'Acetylene',
          'CH3OH': 'Methanol',
          'C7H5N3O6': 'Trinitrotoluene',
-         'SO4': 'Sulphur Dioxide',
+         'SO4': 'Sulfur Dioxide',
          'NaHCO3': 'Sodium Bicarbonate',
          'C2H5OH': 'Ethanol',
          'CH4': 'Methane',

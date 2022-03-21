@@ -39,7 +39,7 @@
     data 13  , Al , Aluminium     , 26.982  , 3 , 13 , 0
     data 14  , Si , Silicone      , 28.086  , 3 , 14 , 6
     data 15  , P  , Phosphorus    , 30.974  , 3 , 15 , 5
-    data 16  , S  , Sulphur       , 32.065  , 3 , 16 , 4
+    data 16  , S  , Sulfur        , 32.065  , 3 , 16 , 4
     data 17  , Cl , Chlorine      , 35.453  , 3 , 17 , 3
     data 18  , Ar , Argon         , 39.948  , 3 , 18 , 2
     data 19  , K  , Potassium     , 39.098  , 4 , 1  , 11
@@ -78,7 +78,7 @@
     data 52  , Te , Tellurium     , 127.6   , 5 , 16 , 4
     data 53  , I  , Iodine        , 126.904 , 5 , 17 , 3
     data 54  , Xe , Xenon         , 131.293 , 5 , 18 , 2
-    data 55  , Cs , Cesium        , 132.905 , 6 , 1  , 11
+    data 55  , Cs , Caesium       , 132.905 , 6 , 1  , 11
     data 56  , Ba , Barium        , 137.327 , 6 , 2  , 10
     data 57  , La , Lanthanum     , 138.905 , 6 , 3  , 12
                                                      : '12 was 8
@@ -167,11 +167,11 @@
     data C6H14O        , Hexanol
     data C8H18O        , Octanol
     data H2O           , Dihydrogen Monoxide
-    data H2SO4         , Sulphuric Acid
+    data H2SO4         , Sulfuric Acid
     data H2O2          , Hydrogen Peroxide
     data CO2           , Carbon Dioxide
-    data SO4           , Sulphur Dioxide
-    data SF6           , Sulphur Hexafluoride
+    data SO4           , Sulfur Dioxide
+    data SF6           , Sulfur Hexafluoride
     data NaCl          , Sodium Chloride
     data CaCO3         , Calcium Carbonate
     data NaHCO3        , Sodium Bicarbonate

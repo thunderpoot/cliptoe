@@ -14,7 +14,7 @@ Mg,Alkaline Earth Metal,12,2,24.305,"Magnesia, a district of Eastern Thessaly in
 Al,Metal,13,13,26.982,"alumina, from Latin alumen (gen. aluminis), 'bitter salt, alum'",3,solid,Aluminium,0
 Si,Metalloid,14,14,28.086,"Latin silex, 'flint' (originally silicium)",3,solid,Silicone,6
 P,Nonmetal,15,15,30.974,"Greek phosphoros, 'light-bearing'",3,solid,Phosphorus,5
-S,Nonmetal,16,16,32.065,"Latin sulphur, 'brimstone'",3,solid,Sulphur,4
+S,Nonmetal,16,16,32.065,"Latin sulphur, 'brimstone'",3,solid,Sulfur,4
 Cl,Halogen,17,17,35.453,"Greek chloros, 'greenish yellow'",3,gas,Chlorine,3
 Ar,Noble Gas,18,18,39.948,"Greek argos, 'idle' (because of its inertness)",3,gas,Argon,2
 K,Alkali Metal,19,1,39.098,"New Latin potassa, 'potash' (the symbol K is derived from Latin kalium)",4,solid,Potassium,11
@@ -53,7 +53,7 @@ Sb,Metalloid,51,15,121.76,"Latin antimonium, the origin of which is uncertain: f
 Te,Metalloid,52,16,127.6,"Latin tellus, 'the ground, earth'",5,solid,Tellurium,4
 I,Halogen,53,17,126.904,"French iode, from Greek ioeides, 'violet')",5,solid,Iodine,3
 Xe,Noble Gas,54,18,131.293,"Greek xenon, neuter form of xenos 'strange'",5,gas,Xenon,2
-Cs,Alkali Metal,55,1,132.905,"Latin caesius, 'sky-blue'",6,solid,Cesium,11
+Cs,Alkali Metal,55,1,132.905,"Latin caesius, 'sky-blue'",6,solid,Caesium,11
 Ba,Alkaline Earth Metal,56,2,137.327,"Greek barys, 'heavy'",6,solid,Barium,10
 La,Lanthanide,57,3,138.905,"Greek lanthanein, 'to lie hidden'",6,solid,Lanthanum,12
 Ce,Lanthanide,58,3,140.116,"the dwarf planet Ceres, considered a planet at the time",8,solid,Cerium,12
