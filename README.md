@@ -1,16 +1,34 @@
-# CLI-PToE
-Command Line Interactive Periodic Table of Elements. _(It's a pretty stupid name.)_ 📋🦶
+![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
+![Perl](https://img.shields.io/badge/perl-%2339457E.svg?style=for-the-badge&logo=perl&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![TeleBASIC](https://raw.githubusercontent.com/telehack-foundation/.github/main/profile/svg/telebasic.svg)
 
-![ezgif-2-5c289550e5](https://user-images.githubusercontent.com/54200401/146476909-0a99cc8e-73b7-41ee-9ca6-74fe06c93858.gif)
+# Cliptoe
+Command Line Periodic Table of Elements
 
-### What?
+![example_gif](https://user-images.githubusercontent.com/54200401/146476909-0a99cc8e-73b7-41ee-9ca6-74fe06c93858.gif)
 
- - ✅ Highlight elements on Periodic Table
- - ✅ Parse chemical formulas
- - ✅ Calculate atomic mass of compounds
- - ✅ Pretty colours!
+## What is it?
 
-### Usage:
+ - Highlight elements on Periodic Table
+ - Parse chemical formulas
+ - Calculate atomic mass of compounds
+
+Web-UI also available [here](https://underwood.network/ptoe).
+
+## Install
+To install the version shown above, and in screenshots below, run the following:
+
+```
+git clone https://github.com/thunderpoot/cliptoe.git /tmp/cliptoe && \
+cd /tmp/cliptoe/perl                                              && \
+curl -L https://cpanmin.us | /usr/bin/env perl - --installdeps .  && \
+cp /tmp/cliptoe/cliptoe.pl /usr/local/bin cliptoe && cd           && \
+rm -rf /tmp/cliptoe                                               && \
+echo "All done"
+```
+
+## Usage
 
 ```
 $ cliptoe -h
@@ -31,37 +49,23 @@ cliptoe --table        show table / highlight elements on table
 cliptoe --mono         disable colours
 ```
 
-### Examples:
+## Examples
 
-<img width="796" alt="Screenshot 2021-12-17 at 02 21 04" src="https://user-images.githubusercontent.com/54200401/146478333-0c055e48-503f-4038-afba-a7b451684524.png">
+<img width="796" alt="Screenshot" src="https://user-images.githubusercontent.com/54200401/146478333-0c055e48-503f-4038-afba-a7b451684524.png">
 
-<img width="797" alt="Screenshot 2021-12-16 at 23 21 41" src="https://user-images.githubusercontent.com/54200401/146463348-203dc15b-2afc-4971-863c-f53712fbe4c0.png">
+<img width="797" alt="Screenshot" src="https://user-images.githubusercontent.com/54200401/146463348-203dc15b-2afc-4971-863c-f53712fbe4c0.png">
 
-<img width="796" alt="Screenshot 2021-12-17 at 01 49 23" src="https://user-images.githubusercontent.com/54200401/146476257-dd5d420f-5c7c-4987-b6fc-089632c800ee.png">
+<img width="796" alt="Screenshot" src="https://user-images.githubusercontent.com/54200401/146476257-dd5d420f-5c7c-4987-b6fc-089632c800ee.png">
 
-<img width="796" alt="Screenshot 2021-12-16 at 23 25 35" src="https://user-images.githubusercontent.com/54200401/146463668-d257bdf7-6e5a-4380-804a-2a4659b7615a.png">
-
-## Implementations in the following languages
-### <img style="vertical-align: middle" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" /> <span style="vertical-align: middle">&nbsp;&nbsp;TeleBASIC</span>
-
-### <img style="vertical-align: middle" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/perl/perl-plain.svg" /> <span style="vertical-align: middle">&nbsp;&nbsp;Perl</span>
-
-### <img style="vertical-align: middle" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /> <span style="vertical-align: middle">&nbsp;&nbsp;Python</span>
-
-### <img style="vertical-align: middle" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" /> <span style="vertical-align: middle">&nbsp;&nbsp;Golang</span>
-
-<br>
 <br>
 
 ## Concept
-The idea was originally a TeleBASIC code-golf exercise, then was ported to Perl.
+The idea was originally a [TeleBASIC](https://github.com/telehack-foundation/.github/blob/main/basic.md) code-golf exercise, then was ported to Perl.
 The example screenshots are from the Perl version.
 
-Creating this program in whatever language has been helpful for me in familiarising myself with syntax,
+Recreating this program in whatever language has been helpful for me in familiarising myself with syntax,
 using the same (fairly naïve) approaches.  I plan to add more 'translations' eventually.
 
-
-## Nitty gritty
 In Perl, the `ptoe_parse_input` function turns a chemical formula into its component items:
 ```perl
 sub ptoe_parse_input
@@ -121,18 +125,16 @@ $VAR1 = [
         ];
 $
 ```
-## Web version
-Web-ui accessible via https://underwood.network/ptoe
 
-## Caveats
+## Caveats / Disclaimer
 These programs are only able to handle formulas like `C15H31N3O13P2`, formulas like `Fe2(SO4)3` are not supported (yet).
-
-## Disclaimer
 I'm not a chemist, and there are probably all kinds of bugs / problems that I'm not aware of.
 I plan to address any such issues to the best of my ability, but cannot make any promises.
-If you find this helpful, please consider [supporting me via PayPal](https://www.paypal.com/donate/?hosted_button_id=NCGGHVES859DA) ❤️
 
 ## Thanks
 [@telnet23](https://github.com/telnet23)
 [@kelturio](https://github.com/Kelturio)
-[@devicons](https://github.com/devicons/)
+
+If you find this helpful, please consider supporting me via PayPal.
+
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.com/donate/?hosted_button_id=NCGGHVES859DA)
