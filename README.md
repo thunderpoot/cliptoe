@@ -16,18 +16,6 @@ Command Line Periodic Table of Elements
 
 Web-UI also available [here](https://underwood.network/ptoe).
 
-## Install
-To install the version shown above, and in screenshots below, run the following:
-
-```
-git clone https://github.com/thunderpoot/cliptoe.git /tmp/cliptoe && \
-cd /tmp/cliptoe/perl                                              && \
-curl -L https://cpanmin.us | /usr/bin/env perl - --installdeps .  && \
-cp /tmp/cliptoe/cliptoe.pl /usr/local/bin cliptoe && cd           && \
-rm -rf /tmp/cliptoe                                               && \
-echo "All done"
-```
-
 ## Usage
 
 ```
