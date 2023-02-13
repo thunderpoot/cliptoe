@@ -57,44 +57,30 @@ $(document).ready(function () {
             colourindex--;
             if (colourindex < 0) {colourindex = 0};
             $('.iresult').html(colourindex+('&nbsp;'.repeat(2-colourindex.toString().length)));
-            let formula = $('input').val();
-            let matches = [...formula.matchAll(/([A-Z][a-z]?)([0-9]+)?/g)];
-            drawPeriodicTable(elements,matches)
-            drawAtmolCalc(elements,matches);
+            parse_and_draw(elements);
         });
         $('.vplus').click(function () {
             colourvariation++;
             if (colourvariation > 99) {colourvariation = 99};
             $('.vresult').html(colourvariation+('&nbsp;'.repeat(2-colourvariation.toString().length)));
-            let formula = $('input').val();
-            let matches = [...formula.matchAll(/([A-Z][a-z]?)([0-9]+)?/g)];
-            drawPeriodicTable(elements,matches)
-            drawAtmolCalc(elements,matches);
+            parse_and_draw(elements);
         });
         $('.vminus').click(function () {
             colourvariation--;
             if (colourvariation < 1) {colourvariation = 1};
             $('.vresult').html(colourvariation+('&nbsp;'.repeat(2-colourvariation.toString().length)));
-            let formula = $('input').val();
-            let matches = [...formula.matchAll(/([A-Z][a-z]?)([0-9]+)?/g)];
-            drawPeriodicTable(elements,matches)
-            drawAtmolCalc(elements,matches);
+            parse_and_draw(elements);
         });
 
         $('#but_dark').click(function () {
             if (isinverted) {
                 isinverted = !isinverted;
-                // $('#darkBG').animate({opacity:0},400, function () {
                 $('body').animate({ backgroundColor: "#fff" }, "slow");
                 $('#container').removeClass("inverted");
-                    // $('#container').removeClass("inverted");
-                // });
             } else {
                 isinverted = !isinverted;
                 $('body').animate({ backgroundColor: "#000" }, "slow");
                 $('#container').addClass("inverted");
-                // $('#darkBG').animate({opacity:1},400);
-                // $('#container').addClass("inverted");
             }
         });
 
@@ -104,6 +90,7 @@ $(document).ready(function () {
             drawAtmolCalc(elements, []);
             $('input').focus();
         });
+
         $('td').click(function (e) {
                 let sym = ''
                 if (e.target.childNodes[0]) {sym = e.target.childNodes[0].textContent};
@@ -181,6 +168,13 @@ function drawAtmolCalc(elements,matches) {
                 '</div>');
         }
     }
+}
+
+function parse_and_draw(elements) {
+    let formula = $('input').val();
+    let matches = [...formula.matchAll(/([A-Z][a-z]?)([0-9]+)?/g)];
+    drawPeriodicTable(elements,matches);
+    drawAtmolCalc(elements,matches);
 }
 
 function drawPeriodicTable(data,hig) {
