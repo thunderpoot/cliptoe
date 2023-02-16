@@ -5,12 +5,14 @@
 [![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://github.com/thunderpoot/cliptoe/tree/main/python)
 [![TeleBASIC](https://raw.githubusercontent.com/telehack-foundation/.github/main/profile/svg/telebasic.svg)](https://github.com/thunderpoot/cliptoe/tree/main/telebasic)
 
-# Cliptoe
+![CLI](https://telehack.com/cmd.svg)
+
+# cliptoe
 Command Line Periodic Table of Elements
 
 ![example_gif](https://user-images.githubusercontent.com/54200401/146476909-0a99cc8e-73b7-41ee-9ca6-74fe06c93858.gif)
 
-## What is it?
+### What is it?
 
  - Highlight elements on Periodic Table
  - Parse chemical formulas
