@@ -126,7 +126,3 @@ I plan to address any such issues to the best of my ability, but cannot make any
 ## Thanks
 [@telnet23](https://github.com/telnet23)
 [@kelturio](https://github.com/Kelturio)
-
-If you find this helpful, please consider supporting me via PayPal.
-
-[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.com/donate/?hosted_button_id=NCGGHVES859DA)
